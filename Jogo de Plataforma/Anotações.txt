@@ -1,0 +1,12 @@
+TILESET
+- São os azulejos
+- Um conjunto de peças usados para montar os TileMaps
+- Permitem a configuração:
+	- Colisão
+	- Profundidade
+
+
+TILEMAP
+- Mapa
+- São os tiles organizados em grade para parecem um mapa.
+- Usam um tileset para ter acesso aos tiles/azulejos.

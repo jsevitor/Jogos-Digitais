@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://kwxnvjc1sc0i"]
+
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_cm0gl"]
+[ext_resource type="Texture2D" uid="uid://dy2ro6ddl0fe5" path="res://assets/Main Characters/player.png" id="1_f1pwb"]
+[ext_resource type="TileSet" uid="uid://b8vw0ilgk42p4" path="res://tileset/tileset_principal.tres" id="3_4pj1s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gkvsh"]
+radius = 9.0
+height = 18.0
+
+[node name="Jogo" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(32, 24)
+script = ExtResource("1_cm0gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_f1pwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gkvsh")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("3_4pj1s")
+format = 2
+layer_0/tile_data = PackedInt32Array(589826, 458753, 0, 589827, 458753, 0, 589828, 458753, 0, 589829, 458753, 0, 589830, 458753, 0, 589831, 458753, 0, 589832, 458753, 0, 589833, 458753, 0, 589834, 458753, 0, 589835, 458753, 0, 589836, 458753, 0, 589837, 458753, 0, 589838, 458753, 0, 589839, 458753, 0, 589840, 458753, 0, 589841, 458753, 0, 589842, 458753, 0, 655362, 458753, 1, 655363, 458753, 1, 655364, 458753, 1, 655365, 458753, 1, 655378, 458753, 1, 655377, 458753, 1, 655376, 458753, 1, 655375, 458753, 1, 655374, 458753, 1, 655373, 458753, 1, 655366, 458753, 1, 655367, 458753, 1, 655368, 458753, 1, 655369, 458753, 1, 655370, 458753, 1, 655371, 458753, 1, 655372, 458753, 1, 589843, 524289, 0, 655379, 524289, 1, 589824, 393217, 0, 655360, 393217, 1, 589825, 458753, 0, 655361, 458753, 1)
